@@ -1,0 +1,35 @@
+﻿.about-section
+  position: relative
+  width: 100%
+  &::after
+    +pseudo
+    right: 0
+    bottom: -10px
+    width: 50%
+    height: 100%
+    background-image: url('../img/about-bg.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 200%
+    opacity: 0.05
+  .my
+    &-name
+      +fz(75)
+      font-weight: 300
+      span
+        color: $color-green
+        font-weight: normal
+    &-position
+      margin-bottom: 40px
+      color: $color-green
+      +fz(43.2)
+    &-hobbies
+      width: 75%
+      margin-bottom: 20px
+      +fz(36)
+      font-weight: 100
+      opacity: 0.58  
+  .buttons
+    display: flex
+    justify-content: space-between
+    width: 55%    
