@@ -10,8 +10,9 @@ html(lang="en-EN")
     title
       block title
   body
-    .wrapper
-      include ../components/header
-      block content
-      include ../components/footer
+    .container
+      .content-wrapper
+        include ../components/menu
+        block content
+        include ../components/footer
     script(src="js/app.min.js")
