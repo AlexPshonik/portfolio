@@ -1,0 +1,52 @@
+﻿.works-section
+  width: 100%
+  height: 100%
+  padding-right: 17px
+  overflow-y: scroll
+
+.works-list
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: -70px
+
+.works-item
+  margin-bottom: 50px
+  width: 45%
+  margin-right: 5%
+  &:nth-child(2n)
+    margin-right: 0
+  &:last-child,
+  &:nth-last-child(2)
+    margin-bottom: 0  
+  &:hover
+    .works-item
+      &__img
+        transform: scale(0.8)
+      &__title
+        top: -100%
+      &__tech
+        top: 0  
+  &__img
+    width: 100%
+    height: 100%
+    transition: transform 0.3s ease
+    &-wrapper
+      height: 155px
+      margin-bottom: 15px
+      background-color: #353055
+  &__desc
+    position: relative
+    height: 26px
+    overflow: hidden
+    color: #ffffff
+    +fz(26)
+  &__title
+    position: absolute
+    top: 0
+    font-weight: 300
+    transition: top 0.3s ease
+  &__tech
+    position: absolute
+    top: 100%  
+    font-weight: 300
+    transition: top 0.3s ease
