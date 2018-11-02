@@ -24,11 +24,15 @@
   display: flex
   flex-direction: column
   width: 100%
-  height: 55%
-  max-height: 450px
+  height: 30%
+  max-height: 330px
   margin-bottom: 65px
   &__item
     height: 25%
+    &.active
+      .main-menu__link
+        border-color: $color-green
+        color: $color-green
   &__link
     display: flex
     align-items: center
@@ -41,6 +45,3 @@
     transition: all 0.3s ease
     &:hover
       background-color: #1b1c1f
-    &.active
-      border-color: $color-green
-      color: $color-green

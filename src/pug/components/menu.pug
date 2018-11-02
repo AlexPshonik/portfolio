@@ -1,11 +1,11 @@
 ﻿header.site-nav
   img(src="img/avatar.png", alt="avatar").avatar
-  nav.main-menu
-    .main-menu__item
-      a(href="#").main-menu__link About
-    .main-menu__item
-      a(href="#").main-menu__link Works
-    .main-menu__item
-      a(href="#").main-menu__link Skills
-    .main-menu__item
-      a(href="#").main-menu__link Contacts
+  ul.main-menu#full-page-menu
+    li(data-menuanchor="about").main-menu__item.active
+      a(href="#about").main-menu__link About
+    li(data-menuanchor="works").main-menu__item
+      a(href="#works").main-menu__link Works
+    li(data-menuanchor="skills").main-menu__item
+      a(href="#skills").main-menu__link Skills
+    li(data-menuanchor="contacts").main-menu__item
+      a(href="#contacts").main-menu__link Contacts

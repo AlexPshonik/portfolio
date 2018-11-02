@@ -1,3 +1,7 @@
-import {hello} from './libs/hello';
+let $ = require('jquery');
+import './full-page'
+import fullPageScroll from './full-page';
 
-hello();
+$(document).ready(function () {
+  fullPageScroll;
+});

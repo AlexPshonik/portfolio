@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "portfolio",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "fullpage.js": "^3.0.3",
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
