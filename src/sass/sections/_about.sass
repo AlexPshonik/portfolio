@@ -6,31 +6,36 @@
     +pseudo
     right: 0
     bottom: -10px
-    width: 50%
+    width: 100%
     height: 100%
     background-image: url('../img/about-bg.svg')
     background-repeat: no-repeat
     background-position: center
     background-size: 200%
     opacity: 0.05
+    +md
+      width: 50%
   .my
     &-name
-      +fz(75)
+      +fz(38)
       font-weight: 300
+      +xs
+        +fz(75)
       span
         color: $color-green
         font-weight: normal
     &-position
       margin-bottom: 40px
       color: $color-green
-      +fz(43.2)
+      +fz(28)
+      +xs
+        +fz(43.2)
     &-hobbies
-      width: 75%
+      width: 95%
       margin-bottom: 20px
-      +fz(36)
+      +fz(22)  
       font-weight: 100
-      opacity: 0.58  
-  .buttons
-    display: flex
-    justify-content: space-between
-    width: 55%    
+      opacity: 0.58
+      +xs
+        width: 75%
+        +fz(36)
