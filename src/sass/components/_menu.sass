@@ -1,43 +1,101 @@
 ﻿.site-nav
-  position: relative
-  display: flex
-  width: 28%
+  position: fixed
+  top: -200%
+  left: 0
+  width: 100%
+  min-width: 320px
   min-height: 100vh
   align-items: center
   flex-direction: column
   background-color: $color-black
-  &::before
-    +pseudo
+  text-align: center
+  transition: top 0.5s ease
+  z-index: 5
+  &.toggled
     top: 0
-    right: 99%
-    height: 100%
-    width: 100vw
-    background-color: $color-black
   .avatar
     width: 150px
     height: auto  
-    margin: 15% 0 60px
+    margin: 8% 0 60px
+    +lg
+      margin: 15% 0 60px
+  +lg
+    position: static
+    margin-right: 35px  
 
 .main-menu
   display: flex
   flex-direction: column
   width: 100%
-  height: 55%
-  max-height: 450px
+  height: 50%
+  margin-bottom: 30px
+  +lg
+    max-height: 330px
+    margin-bottom: 65px
   &__item
     height: 25%
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+    &.active
+      .main-menu__link
+        color: $color-green
+        +lg
+          border-color: $color-green
   &__link
     display: flex
     align-items: center
+    justify-content: center
     height: 100%
-    padding-left: 65px
-    border-left: 12px solid transparent
+    padding: 10px 0
     color: #ffffff
     +fz(32.4)
     font-weight: 300
     transition: all 0.3s ease
     &:hover
       background-color: #1b1c1f
+    +lg
+      justify-content: flex-start
+      padding-left: 65px
+      border-left: 12px solid transparent
+
+.nav-toggle
+  position: fixed
+  top: -40px
+  left: 50%
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  background-color: #000000
+  transform: translateX(-50%)
+  z-index: 6
+  +lg
+    display: none
+  &__content
+    position: relative
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    cursor: pointer
+  &__arrow
+    position: relative
+    padding-top: 100%
+    &::before,
+    &::after
+      +pseudo
+      bottom: 25%
+      width: 30px
+      height: 4px
+      background-color: #ffffff
+      transition: all 0.2s ease
+    &::before
+      left: (100%/5.2)
+      transform: rotate(45deg)
+    &::after
+      right: (100%/5.2)
+      transform: rotate(-45deg)
     &.active
-      border-color: $color-green
-      color: $color-green
+      &::before
+        left: 31%
+      &::after
+        right: 31%  

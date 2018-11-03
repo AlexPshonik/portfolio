@@ -42,10 +42,24 @@ ul, ol
   display: flex
   min-height: 100vh
   background-color: $color-blue
+  padding-right: 30px
+  +md
+    padding-right: 0 
+  &::before,
   &::after
     +pseudo
     top: 0
-    left: 99%
-    background-color: $color-blue
     width: 100vw
     height: 100%
+    background-color: $color-blue
+  &::after
+    left: 99%
+  &::before
+    right: 99%
+    +lg
+      background-color: $color-black  
+
+.main-content
+  height: 100vh
+  flex-grow: 1
+  overflow: hidden

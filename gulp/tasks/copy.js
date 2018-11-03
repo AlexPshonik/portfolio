@@ -14,7 +14,6 @@ gulp.task('copy:img', function () {
     .src([
       config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}'
     ])
-    .pipe(gulpif(config.env === 'production', (imagemin('API_KEY'))))
     .pipe(gulp.dest(config.dest.img));
 });
 
